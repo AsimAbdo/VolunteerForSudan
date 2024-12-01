@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingVertical="@dimen/_10sdp"
+    tools:context=".screens.UserHomeScreen.fragments.HomeFragment">
+
+    <LinearLayout
+        android:id="@+id/ln_filters"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Spinner
+            android:id="@+id/sp_service_filter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:entries="@array/service_filter"
+            style="@style/Theme.VolunteerForSudan.mSpinnerStyle" />
+
+        <Spinner
+            android:id="@+id/sp_based_on_filter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:entries="@array/based_on_filter"
+            style="@style/Theme.VolunteerForSudan.mSpinnerStyle" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/user_home_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ln_filters" />
+</RelativeLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".screens.MainScreen.MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/main_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:theme="@style/Theme.MaterialComponents.Light.DarkActionBar"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/main_title"
+            style="@style/Theme.VolunteerForSudan.mTitleStyle"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/main_et_email"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:drawableStart="@drawable/ic_email"
+                android:inputType="textEmailAddress"
+                android:hint="@string/main_et_email_hint"
+                style="@style/Theme.VolunteerForSudan.mEditTextStyle"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/main_et_password"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:drawableStart="@drawable/ic_password"
+                android:inputType="textPassword"
+                android:hint="@string/main_et_password_hint"
+                style="@style/Theme.VolunteerForSudan.mEditTextStyle"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        
+        <Button
+            android:id="@+id/main_btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/main_btn_login"
+            style="@style/Theme.VolunteerForSudan.mButton"/>
+
+        <TextView
+            android:id="@+id/main_tv_createNewAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/main_tv_createNewAccount"
+            style="@style/Theme.VolunteerForSudan.mLinkTextView"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/main_tv_or"
+            style="@style/base"
+            android:gravity="center"
+            android:textStyle="italic"/>
+
+        <TextView
+            android:id="@+id/main_tv_continueAsGuest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Theme.VolunteerForSudan.mLinkTextView"
+            android:text="@string/main_tv_continueAsGuest" />
+
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

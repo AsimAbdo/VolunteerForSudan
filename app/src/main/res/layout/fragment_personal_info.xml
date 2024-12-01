@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingVertical="@dimen/_15sdp"
+    tools:context=".screens.SignUpScreen.fragments.PersonalInfoFragment">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/personInfo_tv_title"
+        style="@style/Theme.VolunteerForSudan.mTitleStyle" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/personInfo_et_firstName"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:hint="@string/personInfo_et_first_name"
+            android:inputType="textPersonName"
+            android:drawableStart="@drawable/ic_person"
+            style="@style/Theme.VolunteerForSudan.mEditTextStyle"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/personInfo_et_lastName"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:hint="@string/personInfo_et_last_name"
+            android:inputType="textPersonName"
+            android:drawableStart="@drawable/ic_person"
+            style="@style/Theme.VolunteerForSudan.mEditTextStyle"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/gender_label"
+        style="@style/base"
+        android:textStyle="bold"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginHorizontal="@dimen/_7sdp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_male"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/personInfo_rb_male"
+            style="@style/base"/>
+
+        <RadioButton
+            android:id="@+id/rb_female"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="@string/personInfo_rb_female"
+            style="@style/base"/>
+    </RadioGroup>
+<!-- TODO DO NOT FORGET TO TAKE BIRTHDATE INFO -->
+
+    <Button
+        android:id="@+id/next_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/next_btn"
+        style="@style/Theme.VolunteerForSudan.mButton"/>
+
+    <TextView
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_gravity="bottom"
+        android:text="1/2"
+        style="@style/base" />
+
+</LinearLayout>

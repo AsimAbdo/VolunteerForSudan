@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingVertical="@dimen/_15sdp"
+    tools:context=".screens.SignUpScreen.fragments.AccountFragment">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/account_title"
+        style="@style/Theme.VolunteerForSudan.mTitleStyle"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:drawableStart="@drawable/ic_phone"
+            android:inputType="phone"
+            android:hint="@string/et_phoneNumber"
+            style="@style/Theme.VolunteerForSudan.mEditTextStyle" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:drawableStart="@drawable/ic_email"
+            android:inputType="textEmailAddress"
+            android:hint="@string/main_et_email_hint"
+            style="@style/Theme.VolunteerForSudan.mEditTextStyle" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:drawableStart="@drawable/ic_password"
+            android:inputType="textPassword"
+            android:hint="@string/main_et_password_hint"
+            style="@style/Theme.VolunteerForSudan.mEditTextStyle" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_passwordconfirm"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:drawableStart="@drawable/ic_password"
+            android:inputType="textPassword"
+            android:hint="@string/main_et_password_confirm_hint"
+            style="@style/Theme.VolunteerForSudan.mEditTextStyle" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_finish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_continue_to_app"
+        style="@style/Theme.VolunteerForSudan.mButton"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_gravity="bottom"
+        android:text="2/2"
+        style="@style/base" />
+</LinearLayout>

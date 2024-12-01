@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingVertical="@dimen/_15sdp"
+    tools:context=".screens.SignUpScreen.fragments.IdCheckFragment">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_above="@+id/btn_capture"
+        android:text="This will be replaced by Camera View"
+        android:textSize="@dimen/_20sdp"/>
+
+    <Button
+        android:id="@+id/btn_capture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_next"
+        android:backgroundTint="#CDDC39"
+        style="@style/Theme.VolunteerForSudan.mButton"
+        android:layout_marginBottom="0dp"
+        android:text="@string/capture_btn"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/next_btn"
+        style="@style/Theme.VolunteerForSudan.mButton"
+        android:layout_above="@+id/progress_tv"/>
+
+    <TextView
+        android:id="@+id/progress_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="3/5"
+        android:gravity="center"
+        style="@style/base"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

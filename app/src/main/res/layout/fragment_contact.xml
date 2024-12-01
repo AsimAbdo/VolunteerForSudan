@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".screens.SignUpScreen.fragments.ContactFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/account_title"
+        style="@style/Theme.VolunteerForSudan.mTitleStyle"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:drawableStart="@drawable/ic_phone"
+            android:inputType="phone"
+            android:hint="@string/et_phoneNumber"
+            style="@style/Theme.VolunteerForSudan.mEditTextStyle" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:drawableStart="@drawable/ic_email"
+            android:inputType="textEmailAddress"
+            android:hint="@string/main_et_email_hint"
+            style="@style/Theme.VolunteerForSudan.mEditTextStyle" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_national_number"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:drawableStart="@drawable/ic_person"
+            android:inputType="number"
+            android:hint="@string/main_et_national_number"
+            style="@style/Theme.VolunteerForSudan.mEditTextStyle" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/upload_id_label"
+        style="@style/base"
+        android:textStyle="bold"/>
+
+    <Spinner
+        android:id="@+id/spinner_id_types"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:entries="@array/id_types"
+        style="@style/Theme.VolunteerForSudan.mSpinnerStyle" />
+
+    <TextView
+        android:id="@+id/id_photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_upload"
+        android:drawablePadding="@dimen/_5sdp"
+        android:text="@string/upload_label"
+        style="@style/base"/>
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/next_btn"
+        style="@style/Theme.VolunteerForSudan.mButton"
+        android:layout_marginVertical="@dimen/_10sdp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2/5"
+        android:gravity="center"
+        style="@style/base" />
+
+</LinearLayout>
