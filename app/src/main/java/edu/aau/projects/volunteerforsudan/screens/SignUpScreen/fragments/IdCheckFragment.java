@@ -9,8 +9,6 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import edu.aau.projects.volunteerforsudan.R;
 import edu.aau.projects.volunteerforsudan.databinding.FragmentIdCheckBinding;
 
 /**

@@ -1,13 +1,7 @@
 package edu.aau.projects.volunteerforsudan.screens.SignUpScreen;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-
 import android.content.Intent;
 import android.os.Bundle;
-
-import edu.aau.projects.volunteerforsudan.R;
 import edu.aau.projects.volunteerforsudan.databinding.ActivitySignUpBinding;
 import edu.aau.projects.volunteerforsudan.screens.BaseActivity;
 import edu.aau.projects.volunteerforsudan.screens.SignUpScreen.fragments.AccountFragment;
@@ -19,7 +13,6 @@ import edu.aau.projects.volunteerforsudan.screens.SignUpScreen.fragments.Passwor
 import edu.aau.projects.volunteerforsudan.screens.SignUpScreen.fragments.PersonalInfoFragment;
 import edu.aau.projects.volunteerforsudan.screens.SignUpScreen.fragments.UserTypeFragment;
 import edu.aau.projects.volunteerforsudan.screens.UserHomeScreen.UserHomeActivity;
-import edu.aau.projects.volunteerforsudan.utils.UiUtils;
 
 // implements this interface to receive the value of what user have chosen
 public class SignUpActivity extends BaseActivity implements UserTypeFragment.OnUserClickListener

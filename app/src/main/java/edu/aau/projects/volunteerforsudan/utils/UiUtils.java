@@ -14,8 +14,8 @@ public class UiUtils {
         if (fields.length == 0)
             return false;
         else {
-            for (int i = 0; i < fields.length; i++) {
-                if (isEmpty(fields[i]))
+            for (EditText field : fields) {
+                if (isEmpty(field))
                     return false;
             }
         }

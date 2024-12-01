@@ -2,19 +2,14 @@ package edu.aau.projects.volunteerforsudan.screens.UserHomeScreen;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.SearchView;
-
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-
 import com.google.android.material.navigation.NavigationBarView;
-
 import edu.aau.projects.volunteerforsudan.R;
 import edu.aau.projects.volunteerforsudan.databinding.ActivityUserHomeBinding;
 import edu.aau.projects.volunteerforsudan.screens.BaseActivity;
 import edu.aau.projects.volunteerforsudan.screens.UserHomeScreen.fragments.HomeFragment;
-import edu.aau.projects.volunteerforsudan.utils.UiUtils;
 
 public class UserHomeActivity extends BaseActivity implements NavigationBarView.OnItemSelectedListener {
     ActivityUserHomeBinding bin;

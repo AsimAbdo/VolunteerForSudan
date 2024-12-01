@@ -9,15 +9,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import edu.aau.projects.volunteerforsudan.R;
 import edu.aau.projects.volunteerforsudan.databinding.FragmentUserTypeBinding;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link UserTypeFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class UserTypeFragment extends Fragment {
     FragmentUserTypeBinding bin;
     OnUserClickListener listener;

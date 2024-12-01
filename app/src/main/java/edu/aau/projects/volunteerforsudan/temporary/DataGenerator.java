@@ -1,7 +1,6 @@
 package edu.aau.projects.volunteerforsudan.temporary;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import edu.aau.projects.volunteerforsudan.models.ServiceRequest;

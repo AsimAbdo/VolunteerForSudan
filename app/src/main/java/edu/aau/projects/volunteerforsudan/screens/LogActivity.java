@@ -2,8 +2,6 @@ package edu.aau.projects.volunteerforsudan.screens;
 
 import android.os.Bundle;
 import android.util.Log;
-
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 

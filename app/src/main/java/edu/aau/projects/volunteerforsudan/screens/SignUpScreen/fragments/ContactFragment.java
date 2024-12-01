@@ -9,9 +9,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import edu.aau.projects.volunteerforsudan.R;
-import edu.aau.projects.volunteerforsudan.databinding.FragmentAccountBinding;
 import edu.aau.projects.volunteerforsudan.databinding.FragmentContactBinding;
 import edu.aau.projects.volunteerforsudan.utils.UiUtils;
 

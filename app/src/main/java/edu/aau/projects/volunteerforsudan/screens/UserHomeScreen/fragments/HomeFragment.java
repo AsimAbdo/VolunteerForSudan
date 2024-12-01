@@ -3,24 +3,17 @@ package edu.aau.projects.volunteerforsudan.screens.UserHomeScreen.fragments;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.Toast;
-
 import java.util.List;
-
-import edu.aau.projects.volunteerforsudan.R;
 import edu.aau.projects.volunteerforsudan.databinding.FragmentHomeBinding;
 import edu.aau.projects.volunteerforsudan.models.ServiceRequest;
 import edu.aau.projects.volunteerforsudan.screens.LogFragment;
 import edu.aau.projects.volunteerforsudan.temporary.DataGenerator;
 import edu.aau.projects.volunteerforsudan.uiadapters.ServiceAdapter;
-import edu.aau.projects.volunteerforsudan.utils.UiUtils;
 
 public class HomeFragment extends LogFragment {
     FragmentHomeBinding bin;
