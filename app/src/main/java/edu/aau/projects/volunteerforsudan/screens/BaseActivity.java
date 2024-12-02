@@ -25,20 +25,14 @@ public class BaseActivity extends LogActivity {
 
     public void pushFragment(FragmentActivity activity, Fragment fragment, int container_id, String title){
         FragmentManager fm = activity.getSupportFragmentManager();
-        FragmentTransaction ft = fm.beginTransaction();
-        ft.replace(container_id, fragment);
-        ft.addToBackStack(null);
-        ft.commit();
-        activity.setTitle(title);
-    }
 
-    public void pushFragment(FragmentActivity activity, Fragment fragment, int container_id, int title){
-        FragmentManager fm = activity.getSupportFragmentManager();
+        if (fm.findFragmentByTag(title) != null)
+            fm.popBackStack(title, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+
         FragmentTransaction ft = fm.beginTransaction();
-        ft.replace(container_id, fragment);
-        ft.addToBackStack(null);
+        ft.replace(container_id, fragment, title);
+        ft.addToBackStack(title);
         ft.commit();
-        activity.setTitle(title);
     }
 
     public void pushFragment(FragmentActivity activity, Fragment fragment, int container_id, boolean addToBackStack){

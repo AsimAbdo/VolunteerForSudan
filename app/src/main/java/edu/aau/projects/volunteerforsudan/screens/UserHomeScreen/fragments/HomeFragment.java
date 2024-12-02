@@ -2,18 +2,25 @@ package edu.aau.projects.volunteerforsudan.screens.UserHomeScreen.fragments;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.GridLayoutManager;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import java.util.List;
+
+import edu.aau.projects.volunteerforsudan.R;
 import edu.aau.projects.volunteerforsudan.databinding.FragmentHomeBinding;
 import edu.aau.projects.volunteerforsudan.models.ServiceRequest;
 import edu.aau.projects.volunteerforsudan.screens.LogFragment;
 import edu.aau.projects.volunteerforsudan.temporary.DataGenerator;
 import edu.aau.projects.volunteerforsudan.uiadapters.ServiceAdapter;
+import edu.aau.projects.volunteerforsudan.utils.UiUtils;
 
 public class HomeFragment extends LogFragment {
     FragmentHomeBinding bin;
@@ -48,14 +55,16 @@ public class HomeFragment extends LogFragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         bin = FragmentHomeBinding.inflate(inflater);
+//        getActivity().getMenuInflater().inflate(R.menu.home_menu, );
 
         // set up the recycler view to display data
         requests = DataGenerator.getServicesByVolunteer(user_search);
 
-        adapter = new ServiceAdapter(getActivity(), requests);
+        adapter = new ServiceAdapter(getContext(), requests);
         bin.userHomeRv.setAdapter(adapter);
         bin.userHomeRv.setLayoutManager(new GridLayoutManager(getContext(), 2));
         bin.userHomeRv.setHasFixedSize(true);
+
 
         // set up the spinners
         bin.spServiceFilter.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
