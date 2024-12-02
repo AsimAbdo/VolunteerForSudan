@@ -152,4 +152,6 @@
     <string name="menu_volunteers">Volunteers</string>
     <string name="menu_req">Upload</string>
     <string name="search">Search</string>
+    <string name="volunteer">Volunteer</string>
+    <string name="user">Regular User</string>
 </resources>

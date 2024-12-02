@@ -6,14 +6,12 @@ import androidx.appcompat.widget.SearchView;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationBarView;
 import edu.aau.projects.volunteerforsudan.R;
 import edu.aau.projects.volunteerforsudan.databinding.ActivityUserHomeBinding;
 import edu.aau.projects.volunteerforsudan.screens.BaseActivity;
 import edu.aau.projects.volunteerforsudan.screens.UserHomeScreen.fragments.HomeFragment;
-import edu.aau.projects.volunteerforsudan.utils.UiUtils;
 
 public class UserHomeActivity extends BaseActivity implements NavigationBarView.OnItemSelectedListener {
     ActivityUserHomeBinding bin;
@@ -43,10 +41,8 @@ public class UserHomeActivity extends BaseActivity implements NavigationBarView.
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.home_menu, menu);
-//        if (searchView != null)
-//            return true;
         searchView = (SearchView) menu.findItem(R.id.home_menu_search).getActionView();
-        searchView.onWindowFocusChanged(true);
+        searchView.setSubmitButtonEnabled(true);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
