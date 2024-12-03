@@ -3,6 +3,7 @@ package edu.aau.projects.volunteerforsudan.models;
 public class ServiceRequest {
     private int id;
     private String type;
+    private String description;
     private String volunteer;
     private String location;
     private double amount;
@@ -19,13 +20,22 @@ public class ServiceRequest {
         this.date = date;
     }
 
-    public ServiceRequest(int id, String type, String volunteer, String location, double amount, String date) {
+    public ServiceRequest(int id, String type, String description, String volunteer, String location, double amount, String date) {
         this.id = id;
         this.type = type;
+        this.description = description;
         this.volunteer = volunteer;
         this.location = location;
         this.amount = amount;
         this.date = date;
+    }
+
+    public ServiceRequest(String type, String description, String volunteer, String location, double amount) {
+        this.type = type;
+        this.description = description;
+        this.volunteer = volunteer;
+        this.location = location;
+        this.amount = amount;
     }
 
     public int getId() {

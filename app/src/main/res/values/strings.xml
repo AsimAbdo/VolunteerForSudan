@@ -45,6 +45,13 @@
         <item>Food Services</item>
     </array>
 
+    <array name="service_types">
+        <item>Construction Services</item>
+        <item>Displacement Services</item>
+        <item>Treatment Services</item>
+        <item>Food Services</item>
+    </array>
+
     <array name="based_on_filter">
         <item>Random</item>
         <item>My Location</item>
@@ -149,9 +156,14 @@
         clwckmcmkmeocmcepoecm kl cwcewcwe ececewcwce wcwe cewececwc
     </string>
     <string name="menu_home">Home</string>
-    <string name="menu_volunteers">Volunteers</string>
+    <string name="menu_contrib">Contribution</string>
     <string name="menu_req">Upload</string>
     <string name="search">Search</string>
     <string name="volunteer">Volunteer</string>
     <string name="user">Regular User</string>
+    <string name="upload_et_amount_hint">Enter the Amount</string>
+    <string name="upload_et_desc_hint">Enter Description</string>
+    <string name="upload_et_location_hint">Location</string>
+    <string name="upload_et_location_text">Location will be detected atomatocally</string>
+    <string name="upload_request">Upload Request</string>
 </resources>

@@ -10,8 +10,8 @@
         app:showAsAction="ifRoom" />
 
     <item
-        android:id="@+id/user_menu_volunteer"
-        android:title="@string/menu_volunteers"
+        android:id="@+id/user_menu_contribution"
+        android:title="@string/menu_contrib"
         android:icon="@drawable/ic_group"
         app:showAsAction="ifRoom" />
 

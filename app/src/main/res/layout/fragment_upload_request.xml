@@ -1,14 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".screens.UserHomeScreen.fragments.UploadRequestFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <Spinner
+        android:id="@+id/sp_service_type"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="@dimen/_45sdp"
+        android:entries="@array/service_filter"
+        style="@style/Theme.VolunteerForSudan.mSpinnerStyle"/>
 
-</FrameLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/upload_et_description"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:inputType="textMultiLine"
+            android:hint="@string/upload_et_desc_hint"
+            style="@style/Theme.VolunteerForSudan.mEditTextStyle" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/upload_et_location"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:inputType="textPersonName"
+            android:hint="@string/upload_et_location_hint"
+            android:text="@string/upload_et_location_text"
+            android:enabled="false"
+            style="@style/Theme.VolunteerForSudan.mEditTextStyle" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/upload_et_amount"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:inputType="numberDecimal"
+            android:hint="@string/upload_et_amount_hint"
+            style="@style/Theme.VolunteerForSudan.mEditTextStyle" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/upload_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/upload_request"
+        style="@style/Theme.VolunteerForSudan.mButton" />
+</LinearLayout>
