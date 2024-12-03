@@ -3,10 +3,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="gray">#f0f0f0</color>
+    <color name="accent">#1EE9E9</color>
 
     <color name="primary">#4AC81E</color>
     <color name="primaryDark">#2A9804</color>
     <color name="textColor">#585050</color>
     <color name="hintColor">#A18D8D</color>
     <color name="borderColor">#707070</color>
+
 </resources>

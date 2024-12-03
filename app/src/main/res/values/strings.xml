@@ -166,4 +166,11 @@
     <string name="upload_et_location_hint">Location</string>
     <string name="upload_et_location_text">Location will be detected atomatocally</string>
     <string name="upload_request">Upload Request</string>
+    <string name="custom_cont_tv_date">2024-1-2</string>
+    <string name="custom_cont_tv_type">Food service</string>
+    <string name="custom_cont_tv_location">Khartoum</string>
+    <string name="custom_cont_tv_amount">286/1500</string>
+    <string name="like">Like</string>
+    <string name="comments">comments</string>
+    <string name="upload_tv_get_images">Click to upload official papers from Gallery</string>
 </resources>

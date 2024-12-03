@@ -54,6 +54,16 @@
             style="@style/Theme.VolunteerForSudan.mEditTextStyle" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <TextView
+        android:id="@+id/upload_tv_get_images"
+        style="@style/Theme.VolunteerForSudan.mLinkTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/et_shape"
+        android:drawableStart="@drawable/ic_image"
+        android:drawablePadding="@dimen/_5sdp"
+        android:text="@string/upload_tv_get_images" />
+
     <Button
         android:id="@+id/upload_btn"
         android:layout_width="match_parent"

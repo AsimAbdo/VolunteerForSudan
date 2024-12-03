@@ -33,6 +33,12 @@
         <item name="android:layout_marginBottom">@dimen/_20sdp</item>
     </style>
 
+    <style name="Theme.VolunteerForSudan.mUpdateText" parent="Theme.VolunteerForSudan.mTitleStyle">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/accent</item>
+        <item name="android:gravity">center</item>
+    </style>
+
     <style name="Theme.VolunteerForSudan.mEditTextStyle" parent="base">
         <item name="hintTextColor">@color/hintColor</item>
         <item name="android:padding">@dimen/_5sdp</item>
