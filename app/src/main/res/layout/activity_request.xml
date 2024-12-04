@@ -40,7 +40,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical" >
 
             <TextView
@@ -103,7 +103,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/request_btn_donate"
-                    style="@style/Theme.VolunteerForSudan.mButton"
+                    style="@style/Theme.VolunteerForSudan.mLinearButton"
                     android:backgroundTint="@color/donate_color"
                     android:layout_marginHorizontal="@dimen/_10sdp"
                     />
@@ -114,10 +114,23 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/request_btn_join"
-                    style="@style/Theme.VolunteerForSudan.mButton"
+                    style="@style/Theme.VolunteerForSudan.mLinearButton"
                     android:backgroundTint="@color/accent"
                     android:layout_marginHorizontal="@dimen/_10sdp"/>
             </LinearLayout>
+
+            <Button
+                android:id="@+id/req_btn_show_prooves"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/request_btn_show_prooves"
+                style="@style/Theme.VolunteerForSudan.mButton"
+                android:layout_marginVertical="@dimen/_10sdp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/req_rv_evidence"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
         </LinearLayout>
 
     </ScrollView>

@@ -12,7 +12,7 @@
     <item
         android:id="@+id/user_menu_contribution"
         android:title="@string/menu_contrib"
-        android:icon="@drawable/ic_group"
+        android:icon="@drawable/ic_contrib"
         app:showAsAction="ifRoom" />
 
     <item

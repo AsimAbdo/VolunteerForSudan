@@ -58,6 +58,12 @@
         <item>Select Location</item>
     </array>
 
+    <array name="bank_names">
+        <item>Bankak</item>
+        <item>Fawry</item>
+        <item>Ocash</item>
+    </array>
+
     <string name="demo_license">
         fdxzsexryuinomp,lk jhgfcxdrrctbyunomp,lkgcxrbyuinomp, b ctryunm rxd6ft7gyuhjiomk xrtfgyuin smdcioemwocn
         clwckmcmkmeocmcepoecm kl cwcewcwe ececewcwce wcwe cewececwc fdxzsexryuinomp,lk jhgfcxdrrctbyunomp,lkgcxrbyuinomp, b ctryunm rxd6ft7gyuhjiomk xrtfgyuin smdcioemwocn
@@ -156,7 +162,7 @@
         clwckmcmkmeocmcepoecm kl cwcewcwe ececewcwce wcwe cewececwc
     </string>
     <string name="menu_home">Home</string>
-    <string name="menu_contrib">Contribution</string>
+    <string name="menu_contrib">Contributions</string>
     <string name="menu_req">Upload</string>
     <string name="search">Search</string>
     <string name="volunteer">Volunteer</string>
@@ -179,4 +185,11 @@
     <string name="request_tv_v_number">13/21</string>
     <string name="request_btn_donate">Donate</string>
     <string name="request_btn_join">Join</string>
+    <string name="request_btn_show_prooves">Show Officail Evidence</string>
+    <string name="donate_tv_account_label">Payment Information</string>
+    <string name="donate_tv_account_number">865456789</string>
+    <string name="donate_tv_upload">Click to Uploud Payment Picture</string>
+    <string name="donate_tv_explain">Please Upload payment after you donate this helps the volunteer and save him from counting payments.</string>
+    <string name="upload_payment">Send Payment</string>
+    <string name="no_image_selected">No image selected</string>
 </resources>

@@ -1,71 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/_15sdp"
-    android:orientation="vertical"
     tools:context=".screens.SignUpScreen.fragments.UserTypeFragment">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/usertype_Title"
-        style="@style/Theme.VolunteerForSudan.mTitleStyle"
-        android:gravity="center" />
-
-    <RelativeLayout
-        android:layout_width="@dimen/_140sdp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        style="@style/Theme.VolunteerForSudan.mImageCard">
-
-        <ImageView
-            android:id="@+id/usertype_iv_volunteer"
-            android:layout_width="@dimen/_100sdp"
-            android:layout_height="@dimen/_100sdp"
-            android:src="@drawable/volunteer_icon"
-            android:layout_centerHorizontal="true"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/volunteer"
-            style="@style/base"
-            android:textStyle="bold"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/usertype_iv_volunteer"/>
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="@dimen/_140sdp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        style="@style/Theme.VolunteerForSudan.mImageCard">
-
-        <ImageView
-            android:id="@+id/usertype_iv_user"
-            android:layout_width="@dimen/_100sdp"
-            android:layout_height="@dimen/_100sdp"
-            android:src="@drawable/user_icon"
-            android:layout_centerHorizontal="true"/>
+        android:padding="@dimen/_15sdp"
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/user"
-            style="@style/base"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:layout_marginHorizontal="@dimen/_5sdp"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/usertype_iv_user"/>
-    </RelativeLayout>
+            android:text="@string/usertype_Title"
+            style="@style/Theme.VolunteerForSudan.mTitleStyle"
+            android:gravity="center" />
 
-    <Button
-        android:id="@+id/usertype_btn_back"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/usertype_btn"
-        style="@style/Theme.VolunteerForSudan.mButton"/>
-</LinearLayout>
+        <RelativeLayout
+            android:id="@+id/usertype_iv_volunteer"
+            android:layout_width="@dimen/_140sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            style="@style/Theme.VolunteerForSudan.mImageCard">
+
+            <ImageView
+                android:id="@+id/usertype_iv_vol"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:src="@drawable/volunteer_icon"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/volunteer"
+                style="@style/base"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/usertype_iv_vol"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/usertype_iv_user"
+            android:layout_width="@dimen/_140sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            style="@style/Theme.VolunteerForSudan.mImageCard">
+
+            <ImageView
+                android:id="@+id/usertype_iv"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:src="@drawable/user_icon"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/user"
+                style="@style/base"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/usertype_iv"/>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/usertype_btn_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/usertype_btn"
+            style="@style/Theme.VolunteerForSudan.mButton"/>
+    </LinearLayout>
+
+</ScrollView>

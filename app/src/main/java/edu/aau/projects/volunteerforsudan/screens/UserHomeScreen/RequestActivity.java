@@ -32,6 +32,13 @@ public class RequestActivity extends AppCompatActivity {
 
         request = (ServiceRequest) getIntent().getSerializableExtra(REQ_KEY);
         putRequestDatainFields(request);
+
+        bin.reqBtnDonate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(DonateActivity.makeIntent(getBaseContext(), request));
+            }
+        });
     }
 
     private void putRequestDatainFields(ServiceRequest request){

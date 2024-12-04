@@ -1,9 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".screens.UserHomeScreen.DonateActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/donate_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            style="@style/Theme.VolunteerForSudan.mToolbar"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/donate_tv_explain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/donate_tv_explain"
+                style="@style/Theme.VolunteerForSudan.mUpdateText"
+                android:background="@drawable/warning_shape"/>
+
+            <TextView
+                android:id="@+id/donate_tv_volunteer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/request_tv_volunteer"
+                style="@style/Theme.VolunteerForSudan.mTextStyle"/>
+
+            <TextView
+                android:id="@+id/donate_tv_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_amount"
+                android:drawablePadding="@dimen/_5sdp"
+                android:text="@string/custom_cont_tv_amount"
+                style="@style/Theme.VolunteerForSudan.mTextStyle"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/donate_tv_account_label"
+                style="@style/Theme.VolunteerForSudan.mTextStyle"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/donate_tv_account_nmber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/donate_tv_account_number"
+                    style="@style/Theme.VolunteerForSudan.mTextStyle"/>
+
+                <Spinner
+                    android:id="@+id/donate_sp_bank_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/bank_names"
+                    style="@style/Theme.VolunteerForSudan.mSpinnerStyle"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/donate_tv_upload_picture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/donate_tv_upload"
+                style="@style/Theme.VolunteerForSudan.mUpdateText"
+                android:background="@color/donate_color"/>
+
+            <Button
+                android:id="@+id/donate_btn_send"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/upload_payment"
+                style="@style/Theme.VolunteerForSudan.mLinearButton" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

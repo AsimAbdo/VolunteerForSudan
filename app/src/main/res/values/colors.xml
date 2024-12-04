@@ -11,5 +11,6 @@
     <color name="hintColor">#A18D8D</color>
     <color name="donate_color">#CDDC39</color>
     <color name="borderColor">#707070</color>
+    <color name="warning">#F44336</color>
 
 </resources>
