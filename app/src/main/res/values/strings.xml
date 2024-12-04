@@ -173,4 +173,10 @@
     <string name="like">Like</string>
     <string name="comments">comments</string>
     <string name="upload_tv_get_images">Click to upload official papers from Gallery</string>
+    <string name="request_tv_volunteer">Volunteer Name</string>
+    <string name="request_tv_desc">Request Description</string>
+    <string name="request_tv_date">Request Date</string>
+    <string name="request_tv_v_number">13/21</string>
+    <string name="request_btn_donate">Donate</string>
+    <string name="request_btn_join">Join</string>
 </resources>

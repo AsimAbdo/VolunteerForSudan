@@ -10,18 +10,18 @@ public class DataGenerator {
         List<ServiceRequest> serviceRequests = new ArrayList<>();
         //demo data instead of real data from firebase
         for (int i = 0; i < 5; i++) {
-            serviceRequests.add(new ServiceRequest("Food Services", "Asim", "North", 2211.0, "2024-09-12"));
-            serviceRequests.add(new ServiceRequest("Treatment Services", "Mizo", "West", 3451.0, "2024-03-02"));
-            serviceRequests.add(new ServiceRequest("Displacement Services", "Osman", "South", 2931.0, "2024-11-1"));
-            serviceRequests.add(new ServiceRequest("Construction Services", "Ali", "East", 931.0, "2024-05-22"));
-            serviceRequests.add(new ServiceRequest("Food Services", "Mona", "North", 2211.0, "2024-09-12"));
-            serviceRequests.add(new ServiceRequest("Treatment Services", "Emma", "West", 3451.0, "2024-03-02"));
-            serviceRequests.add(new ServiceRequest("Displacement Services", "Salma", "South", 2931.0, "2024-11-1"));
-            serviceRequests.add(new ServiceRequest("Construction Services", "Fatima", "East", 931.0, "2024-05-22"));
-            serviceRequests.add(new ServiceRequest("Food Services", "Omer", "North", 2211.0, "2024-09-12"));
-            serviceRequests.add(new ServiceRequest("Treatment Services", "Malaz", "West", 3451.0, "2024-03-02"));
-            serviceRequests.add(new ServiceRequest("Displacement Services", "Samir", "South", 2931.0, "2024-11-1"));
-            serviceRequests.add(new ServiceRequest("Construction Services", "Aysha", "East", 931.0, "2024-05-22"));
+            serviceRequests.add(new ServiceRequest("Food Services", 4, "some Demo description","Asim", "North", 2211.0, "2024-09-12"));
+            serviceRequests.add(new ServiceRequest("Treatment Services", 0, "some Demo description", "Mizo", "West", 3451.0, "2024-03-02"));
+            serviceRequests.add(new ServiceRequest("Displacement Services", 7, "some Demo description", "Osman", "South", 2931.0, "2024-11-1"));
+            serviceRequests.add(new ServiceRequest("Construction Services", 8, "some Demo description",  "Ali", "East", 931.0, "2024-05-22"));
+            serviceRequests.add(new ServiceRequest("Food Services", 3, "some Demo description", "Mona", "North", 2211.0, "2024-09-12"));
+            serviceRequests.add(new ServiceRequest("Treatment Services", 1, "some Demo description", "Emma", "West", 3451.0, "2024-03-02"));
+            serviceRequests.add(new ServiceRequest("Displacement Services", 2, "some Demo description", "Salma", "South", 2931.0, "2024-11-1"));
+            serviceRequests.add(new ServiceRequest("Construction Services", 9, "some Demo description", "Fatima", "East", 931.0, "2024-05-22"));
+            serviceRequests.add(new ServiceRequest("Food Services", 10, "some Demo description", "Omer", "North", 2211.0, "2024-09-12"));
+            serviceRequests.add(new ServiceRequest("Treatment Services", 6, "some Demo description", "Malaz", "West", 3451.0, "2024-03-02"));
+            serviceRequests.add(new ServiceRequest("Displacement Services", 5, "some Demo description", "Samir", "South", 2931.0, "2024-11-1"));
+            serviceRequests.add(new ServiceRequest("Construction Services", 6, "some Demo description", "Aysha", "East", 931.0, "2024-05-22"));
         }
 
         return serviceRequests;

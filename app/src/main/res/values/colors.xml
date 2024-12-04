@@ -9,6 +9,7 @@
     <color name="primaryDark">#2A9804</color>
     <color name="textColor">#585050</color>
     <color name="hintColor">#A18D8D</color>
+    <color name="donate_color">#CDDC39</color>
     <color name="borderColor">#707070</color>
 
 </resources>

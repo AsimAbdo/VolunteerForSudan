@@ -1,6 +1,8 @@
 package edu.aau.projects.volunteerforsudan.models;
 
-public class ServiceRequest {
+import java.io.Serializable;
+
+public class ServiceRequest implements Serializable {
     private int id;
     private String type;
     private String description;
@@ -8,6 +10,8 @@ public class ServiceRequest {
     private String location;
     private double amount;
     private String date;
+
+    private int helpers;// in case volunteer wanted some help from people
 
     public ServiceRequest() {
     }
@@ -20,22 +24,22 @@ public class ServiceRequest {
         this.date = date;
     }
 
-    public ServiceRequest(int id, String type, String description, String volunteer, String location, double amount, String date) {
-        this.id = id;
+    public ServiceRequest(String type, int helpers, String description, String volunteer, String location, double amount, String date) {
         this.type = type;
         this.description = description;
         this.volunteer = volunteer;
         this.location = location;
         this.amount = amount;
         this.date = date;
+        this.helpers = helpers;
     }
 
-    public ServiceRequest(String type, String description, String volunteer, String location, double amount) {
-        this.type = type;
-        this.description = description;
-        this.volunteer = volunteer;
-        this.location = location;
-        this.amount = amount;
+    public int getHelpers() {
+        return helpers;
+    }
+
+    public void setHelpers(int helpers) {
+        this.helpers = helpers;
     }
 
     public int getId() {
@@ -84,5 +88,13 @@ public class ServiceRequest {
 
     public void setDate(String date) {
         this.date = date;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

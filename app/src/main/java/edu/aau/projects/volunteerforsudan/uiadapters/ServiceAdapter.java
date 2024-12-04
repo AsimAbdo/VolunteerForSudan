@@ -1,6 +1,8 @@
 package edu.aau.projects.volunteerforsudan.uiadapters;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,14 +15,12 @@ import java.util.List;
 import edu.aau.projects.volunteerforsudan.R;
 import edu.aau.projects.volunteerforsudan.databinding.CustomServiceItemBinding;
 import edu.aau.projects.volunteerforsudan.models.ServiceRequest;
+import edu.aau.projects.volunteerforsudan.screens.UserHomeScreen.RequestActivity;
 
 public class ServiceAdapter extends RecyclerView.Adapter<ServiceAdapter.ServiceHolder> {
 
     Context context;
     List<ServiceRequest> serviceRequests;
-
-    public ServiceAdapter() {
-    }
 
     public ServiceAdapter(Context context, List<ServiceRequest> serviceRequests) {
         this.context = context;
@@ -62,6 +62,13 @@ public class ServiceAdapter extends RecyclerView.Adapter<ServiceAdapter.ServiceH
             bin.serviceItemTvVolunteer.setText(request.getVolunteer());
             bin.serviceItemTvAmount.setText(String.valueOf(request.getAmount()));
             bin.serviceItemTvLoc.setText(request.getLocation());
+
+            bin.getRoot().setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    ((Activity) context).startActivity(RequestActivity.makeIntent(context, request));
+                }
+            });
         }
     }
 }
