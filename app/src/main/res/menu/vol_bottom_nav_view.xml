@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/vhome_menu_home"
+        android:title="@string/menu_home"
+        android:icon="@drawable/ic_home"
+        app:showAsAction="ifRoom"
+        android:checked="true"/>
+
+    <item
+        android:id="@+id/vhome_menu_cont"
+        android:title="@string/menu_contrib"
+        android:icon="@drawable/ic_contrib"
+        app:showAsAction="ifRoom"
+        android:checked="true"/>
+
+    <item
+        android:id="@+id/vhome_menu_req"
+        android:title="@string/vhome_menu_req"
+        android:icon="@drawable/ic_heart"
+        app:showAsAction="ifRoom"
+        android:checked="true"/>
+</menu>

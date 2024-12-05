@@ -22,12 +22,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/custom_cont_tv_date"
+                android:drawableStart="@drawable/ic_calender"
+                android:drawablePadding="@dimen/_5sdp"
                 style="@style/Theme.VolunteerForSudan.mCardTextViewStyle"/>
 
             <ImageView
                 android:id="@+id/custom_cont_iv_image"
-                android:layout_width="@dimen/_100sdp"
-                android:layout_height="@dimen/_100sdp"
+                android:layout_width="@dimen/_105sdp"
+                android:layout_height="@dimen/_105sdp"
                 style="@style/base"
                 android:layout_below="@+id/custom_cont_tv_date"/>
 
@@ -36,6 +38,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/custom_cont_tv_type"
+                android:drawableStart="@drawable/ic_info"
+                android:padding="@dimen/_3sdp"
                 style="@style/Theme.VolunteerForSudan.mCardTextViewStyle"
                 android:layout_toEndOf="@+id/custom_cont_iv_image"
                 android:layout_alignTop="@+id/custom_cont_iv_image"/>
@@ -45,6 +49,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/custom_cont_tv_location"
+                android:drawableStart="@drawable/ic_location"
+                android:padding="@dimen/_3sdp"
                 style="@style/Theme.VolunteerForSudan.mCardTextViewStyle"
                 android:layout_toEndOf="@+id/custom_cont_iv_image"
                 android:layout_below="@+id/custom_cont_tv_type"/>
@@ -54,6 +60,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/custom_cont_tv_amount"
+                android:drawableStart="@drawable/ic_amount"
+                android:padding="@dimen/_3sdp"
                 style="@style/Theme.VolunteerForSudan.mCardTextViewStyle"
                 android:layout_toEndOf="@+id/custom_cont_iv_image"
                 android:layout_below="@+id/custom_cont_tv_location"/>
@@ -63,6 +71,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/volunteer"
+                android:drawableStart="@drawable/ic_baseline_person"
+                android:padding="@dimen/_3sdp"
                 style="@style/Theme.VolunteerForSudan.mCardTextViewStyle"
                 android:layout_toEndOf="@+id/custom_cont_iv_image"
                 android:layout_below="@+id/custom_cont_tv_amount"/>
@@ -105,7 +115,5 @@
             </LinearLayout>
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
-
-
 
 </LinearLayout>

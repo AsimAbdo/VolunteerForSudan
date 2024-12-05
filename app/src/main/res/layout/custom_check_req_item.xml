@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/_8sdp"
+        android:layout_margin="@dimen/_6sdp"
+        app:cardCornerRadius="@dimen/_5sdp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/custom_cr_tv_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_info"
+                android:drawablePadding="@dimen/_3sdp"
+                android:text="@string/custom_cont_tv_type"
+                style="@style/Theme.VolunteerForSudan.mCardTextViewStyle"/>
+
+            <ImageView
+                android:id="@+id/custom_cr_iv_image"
+                android:layout_width="@dimen/_250sdp"
+                android:layout_height="@dimen/_250sdp"
+                style="@style/base"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/custom_cr_tv_location"/>
+
+            <TextView
+                android:id="@+id/custom_cr_tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/custom_cont_tv_date"
+                android:drawableStart="@drawable/ic_calender"
+                android:padding="@dimen/_3sdp"
+                style="@style/Theme.VolunteerForSudan.mCardTextViewStyle"
+                android:layout_alignStart="@+id/custom_cr_tv_type"
+                android:layout_below="@id/custom_cr_tv_type" />
+
+            <TextView
+                android:id="@+id/custom_cr_tv_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/custom_cont_tv_location"
+                android:drawableStart="@drawable/ic_location"
+                android:padding="@dimen/_3sdp"
+                style="@style/Theme.VolunteerForSudan.mCardTextViewStyle"
+                android:layout_alignStart="@+id/custom_cr_tv_type"
+                android:layout_below="@+id/custom_cr_tv_date"/>
+
+            <TextView
+                android:id="@+id/custom_cr_tv_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/custom_cont_tv_amount"
+                android:drawableStart="@drawable/ic_amount"
+                android:padding="@dimen/_3sdp"
+                style="@style/Theme.VolunteerForSudan.mCardTextViewStyle"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/custom_cr_tv_date"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/custom_cr_iv_image">
+
+                <Button
+                    android:id="@+id/custom_cr_btn_accept"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="@string/btn_accept"
+                    android:layout_weight="1"
+                    style="@style/Theme.VolunteerForSudan.mLinearButton"
+                    android:backgroundTint="@color/accent"/>
+
+                <Button
+                    android:id="@+id/custom_cr_btn_reject"
+                    style="@style/Theme.VolunteerForSudan.mLinearButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/btn_reject"
+                    android:backgroundTint="@color/warning"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/custom_cr_iv_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_next"
+                android:layout_alignTop="@id/custom_cr_iv_image"
+                android:layout_alignBottom="@id/custom_cr_iv_image"
+                android:layout_alignParentEnd="true"/>
+
+            <ImageView
+                android:id="@+id/custom_cr_iv_previous"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_before"
+                android:layout_alignTop="@id/custom_cr_iv_image"
+                android:layout_alignBottom="@id/custom_cr_iv_image"
+                android:layout_alignParentStart="true"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

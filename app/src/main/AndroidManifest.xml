@@ -18,6 +18,9 @@
         android:theme="@style/Theme.VolunteerForSudan"
         tools:targetApi="31">
         <activity
+            android:name=".screens.VolunteerHomeScreen.VolunteerHomeActivity"
+            android:exported="false" />
+        <activity
             android:name=".screens.UserHomeScreen.DonateActivity"
             android:exported="false" />
         <activity

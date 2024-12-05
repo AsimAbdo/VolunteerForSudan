@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        android:elevation="@dimen/_8sdp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/custom_v_tv_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/custom_cont_tv_date"
+                android:drawableStart="@drawable/ic_calender"
+                android:drawablePadding="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                style="@style/Theme.VolunteerForSudan.mCardTextViewStyle"/>
+
+            <ImageView
+                android:id="@+id/custom_v_iv_image"
+                android:layout_width="@dimen/_95sdp"
+                android:layout_height="@dimen/_95sdp"
+                style="@style/base"
+                android:layout_below="@+id/custom_v_tv_date"/>
+
+            <TextView
+                android:id="@+id/custom_v_tv_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/custom_cont_tv_type"
+                android:drawableStart="@drawable/ic_info"
+                android:padding="@dimen/_3sdp"
+                style="@style/Theme.VolunteerForSudan.mCardTextViewStyle"
+                android:layout_toEndOf="@+id/custom_v_iv_image"
+                android:layout_alignTop="@+id/custom_v_iv_image"/>
+
+            <TextView
+                android:id="@+id/custom_v_tv_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/custom_cont_tv_location"
+                android:drawableStart="@drawable/ic_location"
+                android:padding="@dimen/_3sdp"
+                style="@style/Theme.VolunteerForSudan.mCardTextViewStyle"
+                android:layout_toEndOf="@+id/custom_v_iv_image"
+                android:layout_below="@+id/custom_v_tv_type"/>
+
+            <TextView
+                android:id="@+id/custom_v_tv_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_amount"
+                android:padding="@dimen/_3sdp"
+                android:text="@string/custom_cont_tv_amount"
+                style="@style/Theme.VolunteerForSudan.mCardTextViewStyle"
+                android:layout_toEndOf="@+id/custom_v_iv_image"
+                android:layout_below="@+id/custom_v_tv_location"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

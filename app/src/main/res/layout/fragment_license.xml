@@ -28,6 +28,7 @@
 
 
     <CheckBox
+        android:id="@+id/license_cb_check"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/license_cb_text"
@@ -38,6 +39,7 @@
         android:id="@+id/btn_finish"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:enabled="false"
         android:text="@string/btn_continue_to_app"
         style="@style/Theme.VolunteerForSudan.mButton"/>
 

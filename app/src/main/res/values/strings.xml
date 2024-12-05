@@ -64,6 +64,12 @@
         <item>Ocash</item>
     </array>
 
+    <array name="req_filter">
+        <item>Ready to Start</item>
+        <item>is getting ready to start</item>
+        <item>Already done</item>
+    </array>
+
     <string name="demo_license">
         fdxzsexryuinomp,lk jhgfcxdrrctbyunomp,lkgcxrbyuinomp, b ctryunm rxd6ft7gyuhjiomk xrtfgyuin smdcioemwocn
         clwckmcmkmeocmcepoecm kl cwcewcwe ececewcwce wcwe cewececwc fdxzsexryuinomp,lk jhgfcxdrrctbyunomp,lkgcxrbyuinomp, b ctryunm rxd6ft7gyuhjiomk xrtfgyuin smdcioemwocn
@@ -192,4 +198,8 @@
     <string name="donate_tv_explain">Please Upload payment after you donate this helps the volunteer and save him from counting payments.</string>
     <string name="upload_payment">Send Payment</string>
     <string name="no_image_selected">No image selected</string>
+    <string name="vhome_menu_req">Requests</string>
+    <string name="vhome_tv_title">Requests under supervision</string>
+    <string name="btn_accept">Accept</string>
+    <string name="btn_reject">Reject</string>
 </resources>
