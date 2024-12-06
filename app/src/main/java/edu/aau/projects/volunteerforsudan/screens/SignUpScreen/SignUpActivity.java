@@ -2,6 +2,11 @@ package edu.aau.projects.volunteerforsudan.screens.SignUpScreen;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.PersistableBundle;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+
 import edu.aau.projects.volunteerforsudan.databinding.ActivitySignUpBinding;
 import edu.aau.projects.volunteerforsudan.screens.BaseActivity;
 import edu.aau.projects.volunteerforsudan.screens.SignUpScreen.fragments.AccountFragment;
@@ -30,9 +35,10 @@ public class SignUpActivity extends BaseActivity implements UserTypeFragment.OnU
         bin = ActivitySignUpBinding.inflate(getLayoutInflater());
         setContentView(bin.getRoot());
         setSupportActionBar(bin.signToolbar);
-
-        pushFragment(this, new UserTypeFragment(), bin.signContainer.getId(), true);
+        pushFragment(this, new UserTypeFragment(), bin.signContainer.getId(), false);
     }
+
+
 
     @Override
     public void onUserClick(int choice) {
@@ -46,6 +52,7 @@ public class SignUpActivity extends BaseActivity implements UserTypeFragment.OnU
             pushFragment(this, new AccountFragment(), bin.signContainer.getId(), true);
         } else if (user_type == 0) {
             startActivity(new Intent(this, UserHomeActivity.class));
+            finish();
         }
         else {
             switch (current_progress) {

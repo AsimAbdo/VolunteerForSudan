@@ -5,18 +5,43 @@
     android:layout_height="match_parent"
     tools:context=".screens.VolunteerHomeScreen.fragments.VolunteerHomeFragment">
 
+    <LinearLayout
+        android:id="@+id/ln_fil"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/vhome_tv_title"
+            style="@style/Theme.VolunteerForSudan.mTextStyle"
+            android:layout_marginVertical="0dp"
+            android:layout_marginEnd="@dimen/_10sdp"/>
+
         <Spinner
             android:id="@+id/vhome_sp_filter"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:entries="@array/req_filter"
             style="@style/Theme.VolunteerForSudan.mSpinnerStyle"
-            android:layout_alignParentEnd="true"/>
+            android:layout_marginVertical="0dp"
+            android:layout_marginStart="0dp"/>
+    </LinearLayout>
+<!--        <Spinner-->
+<!--            android:id="@+id/vhome_sp_filter"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:entries="@array/req_filter"-->
+<!--            style="@style/Theme.VolunteerForSudan.mSpinnerStyle"-->
+<!--            android:layout_alignParentEnd="true"/>-->
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/vhome_rv_request"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/vhome_sp_filter" />
+        android:layout_below="@id/ln_fil" />
 
 </RelativeLayout>

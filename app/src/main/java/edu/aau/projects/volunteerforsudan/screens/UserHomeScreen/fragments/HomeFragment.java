@@ -6,6 +6,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.GridLayoutManager;
+
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -34,11 +37,8 @@ public class HomeFragment extends LogFragment {
     }
 
     public static HomeFragment newInstance(String query) {
-        HomeFragment fragment = new HomeFragment();
-        Bundle bun = new Bundle();
-        bun.putString(USER_SEARCH_KEY, query);
-        fragment.setArguments(bun);
-        return fragment;
+
+        return new HomeFragment();
     }
 
     @Override
@@ -55,7 +55,6 @@ public class HomeFragment extends LogFragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         bin = FragmentHomeBinding.inflate(inflater);
-//        getActivity().getMenuInflater().inflate(R.menu.home_menu, );
 
         // set up the recycler view to display data
         requests = DataGenerator.getServicesByVolunteer(user_search);
@@ -65,7 +64,22 @@ public class HomeFragment extends LogFragment {
         bin.userHomeRv.setLayoutManager(new GridLayoutManager(getContext(), 2));
         bin.userHomeRv.setHasFixedSize(true);
 
+        bin.svVol.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                updateData(s.toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
         // set up the spinners
         bin.spServiceFilter.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -79,6 +93,23 @@ public class HomeFragment extends LogFragment {
                 adapter.setServices(DataGenerator.getServicesByVolunteer(user_search));
             }
         });
+
+        bin.ivFilter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (bin.lnFilters.getVisibility() == View.VISIBLE)
+                    bin.lnFilters.setVisibility(View.GONE);
+                else
+                    bin.lnFilters.setVisibility(View.VISIBLE);
+
+            }
+        });
         return bin.getRoot();
+    }
+
+    private void updateData(String query){
+        user_search = query;
+        requests = DataGenerator.getServicesByVolunteer(user_search);
+        adapter.setServices(requests);
     }
 }

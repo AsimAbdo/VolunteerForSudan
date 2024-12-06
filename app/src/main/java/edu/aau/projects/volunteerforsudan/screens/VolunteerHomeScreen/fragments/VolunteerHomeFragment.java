@@ -48,7 +48,6 @@ public class VolunteerHomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         bin = FragmentVolunteerHomeBinding.inflate(inflater);
-        getActivity().setTitle(R.string.vhome_tv_title);
 
         requests = DataGenerator.getServicesByVolunteer(volunteer);
         adapter = new VolRequestAdapter(getContext(), requests);

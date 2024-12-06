@@ -43,6 +43,7 @@ public class UploadRequestFragment extends Fragment {
         // Inflate the layout for this fragment
         bin = FragmentUploadRequestBinding.inflate(getLayoutInflater());
 
+
         bin.uploadBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

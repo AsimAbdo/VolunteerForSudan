@@ -7,6 +7,10 @@
 
     <color name="primary">#4AC81E</color>
     <color name="primaryDark">#2A9804</color>
+    <color name="greenDark">#089135</color>
+    <color name="redLight">#e04334</color>
+    <color name="darkLight">#494949</color>
+    <color name="blue">#1e74e3</color>
     <color name="textColor">#585050</color>
     <color name="hintColor">#A18D8D</color>
     <color name="donate_color">#CDDC39</color>

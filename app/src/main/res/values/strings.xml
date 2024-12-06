@@ -68,6 +68,7 @@
         <item>Ready to Start</item>
         <item>is getting ready to start</item>
         <item>Already done</item>
+        <item>needs to verify</item>
     </array>
 
     <string name="demo_license">
@@ -199,7 +200,11 @@
     <string name="upload_payment">Send Payment</string>
     <string name="no_image_selected">No image selected</string>
     <string name="vhome_menu_req">Requests</string>
-    <string name="vhome_tv_title">Requests under supervision</string>
+    <string name="vhome_tv_title">My Requests</string>
     <string name="btn_accept">Accept</string>
     <string name="btn_reject">Reject</string>
+    <string name="search_by_vol_hint">Type Volunteer name to search</string>
+    <string name="home_title">Home</string>
+    <string name="greeting_user">Welcome User</string>
+    <string name="greeting">"Hello "</string>
 </resources>

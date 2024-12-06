@@ -41,6 +41,7 @@ public class LicenseFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getActivity(), VolunteerHomeActivity.class));
+                getActivity().finish();
             }
         });
         return bin.getRoot();

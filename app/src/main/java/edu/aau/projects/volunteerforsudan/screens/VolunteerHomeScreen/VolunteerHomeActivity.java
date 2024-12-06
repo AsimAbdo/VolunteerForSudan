@@ -29,6 +29,7 @@ public class VolunteerHomeActivity extends BaseActivity implements NavigationBar
         bin = ActivityVolunteerHomeBinding.inflate(getLayoutInflater());
         setContentView(bin.getRoot());
         setSupportActionBar(bin.vhomeToolbar);
+        setTitle(getString(R.string.greeting).concat("Volunteer"));
 
         bin.vhomeBnv.setOnItemSelectedListener(this);
         pushFragment(this, VolunteerHomeFragment.newInstance("Asim"), bin.vhomeContainer.getId(), false);

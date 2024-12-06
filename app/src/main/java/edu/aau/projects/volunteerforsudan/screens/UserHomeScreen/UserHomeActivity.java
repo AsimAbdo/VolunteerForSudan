@@ -1,5 +1,8 @@
 package edu.aau.projects.volunteerforsudan.screens.UserHomeScreen;
 
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.contract.ActivityResultContract;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.UiContext;
@@ -54,6 +57,7 @@ public class UserHomeActivity extends BaseActivity implements NavigationBarView.
         bin = ActivityUserHomeBinding.inflate(getLayoutInflater());
         setContentView(bin.getRoot());
         setSupportActionBar(bin.userToolbar);
+        setTitle(getString(R.string.greeting).concat("User"));
 
         bin.userBottomNavView.setOnItemSelectedListener(this);
         pushFragment(this, new HomeFragment(), bin.userContainer.getId(), false);
@@ -87,37 +91,6 @@ public class UserHomeActivity extends BaseActivity implements NavigationBarView.
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.home_menu, menu);
-        searchView = (SearchView) menu.findItem(R.id.home_menu_search).getActionView();
-        searchView.setSubmitButtonEnabled(true);
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                pushFragment(UserHomeActivity.this, HomeFragment.newInstance(query),
-                        bin.userContainer.getId(), "true");
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-//                pushFragment(UserHomeActivity.this, HomeFragment.newInstance(newText), bin.userContainer.getId(), false);
-                return false;
-            }
-        });
-        searchView.setOnCloseListener(new SearchView.OnCloseListener() {
-            @Override
-            public boolean onClose() {
-                pushFragment(UserHomeActivity.this, HomeFragment.newInstance(""),
-                        bin.userContainer.getId(), "main");
-                return false;
-            }
-        });
-
-        return true;
-    }
-
-    @Override
     public void onLocationChanged(@NonNull Location location) {
 //        if (location != null)
 //            return;
@@ -146,8 +119,14 @@ public class UserHomeActivity extends BaseActivity implements NavigationBarView.
 
     @Override
     public Uri onGetImageClick() {
-        Intent getImage = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-        startActivityForResult(getImage, 2);
+//        Intent getImage = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+//        startActivityForResult(getImage, 2);
+//        registerForActivityResult(new ActivityResultContracts.GetContent(), new ActivityResultCallback<Uri>() {
+//            @Override
+//            public void onActivityResult(Uri o) {
+//
+//            }
+//        });
         return null;
     }
 
@@ -156,6 +135,9 @@ public class UserHomeActivity extends BaseActivity implements NavigationBarView.
         super.onActivityResult(requestCode, resultCode, data);
         if (data == null){
             UiUtils.makeToast("Something happened", this);
+        }
+        else {
+            UiUtils.makeToast("Done", this);
         }
     }
 }
